@@ -10,7 +10,7 @@ let config = new AWS.Config({
 
 var s3 = new AWS.S3(config);
 
-module.export.addContentToS3 = function(bucket,filePath){
+module.exports.addContentToS3 = function(bucket,filePath){
 
     fs.readFile(filePath, function(err,data){
               if ( err ) {
